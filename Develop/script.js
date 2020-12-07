@@ -34,21 +34,13 @@ function generatePassword (){
 
   // Loop to create the password itself using the information gathered above
   var result = ""
-    for(var i = 0; i < passLength; i++) {
-      result = result + included[Math.floor(Math.random() * included.passLength)];
+    for (var i = 0; i < passLength; i++) {
+      result = result + included[Math.floor(Math.random() * included.length)];
     }
     
     alert(result);
+
 }
-
-
-
-
-
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
