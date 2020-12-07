@@ -8,7 +8,7 @@ var symbols = "0123456789"
 var numbers = "!@#$%^&*()_+-"
 
 
-// User input and prompts
+// function that asks what to include from the arrays above
 function generatePassword (){
   var passLength = (window.prompt ("How many characters would you like to include (be sure to select more than 8)"))
   var incUppercase = confirm ("Include Uppercase Letters?")
@@ -19,27 +19,26 @@ function generatePassword (){
 
 
 
-// Generating password
+// Determine what will be included based on the user's choice from the questions above
   var included = "";
-  if (incUppercase) {
-    included = included + uppercase;
-  } if (incLowercase) { 
-    included = included + lowercase; 
-  } if (incSymbols) { 
-    included = included + symbols;
-  } if (incNumbers) { 
-    included = included + numbers;
-  }
+    if (incUppercase) {
+      included = included + uppercase;
+    } if (incLowercase) { 
+      included = included + lowercase; 
+    } if (incSymbols) { 
+      included = included + symbols;
+    } if (incNumbers) { 
+      included = included + numbers;
+    }
 
 
-
+  // Loop to create the password itself using the information gathered above
   var result = ""
-  for(var i = 0; i < passLength; i++) {
-    var inc = Math.floor(Math.random() * included.passLength)
-    result += included.charAt(inc);
-  }
-  
-  alert(result);
+    for(var i = 0; i < passLength; i++) {
+      result = result + included[Math.floor(Math.random() * included.passLength)];
+    }
+    
+    alert(result);
 }
 
 
