@@ -10,13 +10,16 @@ var numbers = "!@#$%^&*()_+-"
 
 // function that asks what to include from the arrays above
 function generatePassword (){
-  var passLength = (window.prompt ("How many characters would you like to include (be sure to select more than 8)"))
+  var passLength = (window.prompt ("How many characters would you like to include (be sure to select between 8 and 100)"))
+  if(passLength <= 7 || passLength >= 101){
+    alert("The password needs to be between 8 and 128 characters long")
+    generatePassword();
+  } else {
   var incUppercase = confirm ("Include Uppercase Letters?")
   var incLowercase = confirm ("Include Lowercase Letters?")
   var incSymbols = confirm ("Include Symbols?")
   var incNumbers = confirm ("Include Numbers?")
-
-
+  }
 
 
 // Determine what will be included based on the user's choice from the questions above
