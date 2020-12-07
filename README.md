@@ -14,7 +14,7 @@ https://alexandraws29.github.io/Password-Generator/
 
 The following image demonstrates the application functionality:
 
-![password generator demo](.\Develop\assets\passwordGenerator.png)
+![password generator demo](.\assets\passwordGenerator.png)
 
 
 
