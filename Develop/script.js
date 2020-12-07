@@ -21,10 +21,15 @@ function generatePassword (){
 
 // Generating password
   var included = "";
-  (incUppercase) ? included += uppercase : '';
-  (incLowercase) ? included += lowercase : '';
-  (incSymbols) ? included += symbols : '';
-  (incNumbers) ? included += numbers : '';
+  if (incUppercase) {
+    included = included + uppercase;
+  } if (incLowercase) { 
+    included = included + lowercase; 
+  } if (incSymbols) { 
+    included = included + symbols;
+  } if (incNumbers) { 
+    included = included + numbers;
+  }
 
 
 
