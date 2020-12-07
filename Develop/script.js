@@ -9,17 +9,17 @@ var numbers = "!@#$%^&*()_+-"
 
 
 // User input and prompts
-var passLength = Number(window.prompt ("How many characters would you like to include (be sure to select more than 8)", ""))
-debugger;
-var incUppercase = confirm ("Include Uppercase Letters?")
-var incLowercase = confirm ("Include Lowercase Letters?")
-var incSymbols = confirm ("Include Symbols?")
-var incNumbers = confirm ("Include Numbers?")
+function generatePassword (){
+  var passLength = (window.prompt ("How many characters would you like to include (be sure to select more than 8)"))
+  var incUppercase = confirm ("Include Uppercase Letters?")
+  var incLowercase = confirm ("Include Lowercase Letters?")
+  var incSymbols = confirm ("Include Symbols?")
+  var incNumbers = confirm ("Include Numbers?")
 
 
 
 
-Generating password
+// Generating password
   var included = "";
   (incUppercase) ? included += uppercase : '';
   (incLowercase) ? included += lowercase : '';
@@ -28,10 +28,9 @@ Generating password
 
 
 
-function generatePassword (){
   var result = ""
-  for(var i = 0; i < PassLength; i++) {
-    var inc = Math.floor(Math.random() * included.passlength)
+  for(var i = 0; i < passLength; i++) {
+    var inc = Math.floor(Math.random() * included.passLength)
     result += included.charAt(inc);
   }
   
@@ -46,7 +45,7 @@ function generatePassword (){
 
 
 
-/*
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -61,4 +60,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-*/
