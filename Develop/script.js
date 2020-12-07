@@ -38,7 +38,7 @@ function generatePassword (){
       result = result + included[Math.floor(Math.random() * included.length)];
     }
     
-    alert(result);
+    return(result);
 
 }
 
