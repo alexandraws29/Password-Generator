@@ -10,10 +10,10 @@ var symbols = "!@#$%^&*()_+-"
 
 // function that asks what to include from the arrays above
 function generatePassword (){
-  var passLength = (window.prompt ("How many characters would you like to include (be sure to select between 8 and 100)"))
-  while (passLength <= 7 || passLength >= 101){
-    alert("Please select a number between 8 and 100")
-    var passLength = (window.prompt ("How many characters would you like to include (be sure to select between 8 and 100)"))
+  var passLength = (window.prompt ("How many characters would you like to include (be sure to select between 8 and 128)"))
+  while (passLength <= 7 || passLength >= 129){
+    alert("Please select a number between 8 and 128")
+    var passLength = (window.prompt ("How many characters would you like to include (be sure to select between 8 and 128)"))
   }
     var incUppercase = confirm ("Include Uppercase Letters?")
     var incLowercase = confirm ("Include Lowercase Letters?")
