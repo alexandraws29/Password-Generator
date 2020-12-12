@@ -4,8 +4,8 @@
 // Arrays for available options
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercase = "abcdefghijklmnopqrstuvwxyz"
-var symbols = "0123456789"
-var numbers = "!@#$%^&*()_+-"
+var numbers = "0123456789"
+var symbols = "!@#$%^&*()_+-"
 
 
 // function that asks what to include from the arrays above
